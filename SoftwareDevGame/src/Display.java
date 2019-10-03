@@ -1,10 +1,11 @@
-import javax.swing.JFrame;
-
+import java.awt.*;
+import javax.swing.*;
 
 //used to store the JFrame data and create the display
 public class Display {
 	
 	private JFrame frame;
+	private Canvas canvas;
 	
 	private String title;
 	private int width, height;
@@ -26,5 +27,13 @@ public class Display {
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
+		
+		//canvas which allows for drawing the game objects on it
+		canvas = new Canvas();
+		canvas.setPreferredSize(new Dimension(width, height));
+		canvas.setMaximumSize(new Dimension(width, height));
+		canvas.setMinimumSize(new Dimension(width, height));
+		frame.add(canvas);
+		frame.pack();
 	}
 }
