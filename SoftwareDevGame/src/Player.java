@@ -21,13 +21,14 @@ public class Player extends Creature {
 	public void render(Graphics g) {
 		g.setColor(Color.CYAN);
 		g.fillOval((int) x, (int) y, width, height);
-		g.drawString("Health: " + super.getHealth(), 0, 480);
+		if (this.getHealth() > 0) {
+			g.drawString("Health: " + super.getHealth(), 0, 490);	
+		}
+		else {
+			g.drawString("Game Over! You Lost all your Health!",0,490);
+		}
 	}
 
-	@Override
-	public void die() {
-		System.out.println("You lose");
-		
-	}
+
 
 }

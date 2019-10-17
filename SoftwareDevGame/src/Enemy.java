@@ -48,11 +48,6 @@ public class Enemy extends Creature{
 		g.fillRect((int) super.getX(), (int)super.getY(), width, height);
 	}
 
-	@Override
-	public void die() {
-		
-	}
-	
 	//checks to see if the enemy was shielded, and if it was returns true
 	public boolean checkShielded(Shield shield) {
 		

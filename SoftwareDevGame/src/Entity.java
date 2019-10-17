@@ -28,12 +28,9 @@ public abstract class Entity {
 		health -= amt;
 		if (health <= 0) {
 			active = false;
-			die();
 		}
 	}
 	
-	//does certain commands upon losing all health
-	public abstract void die();
 	
 	
 	

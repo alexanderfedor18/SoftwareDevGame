@@ -69,9 +69,6 @@ public class Shield extends Entity{
 		return state;
 	}
 
-	@Override
-	public void die() {
-		
-	}
+	
 	
 }
