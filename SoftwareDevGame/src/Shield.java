@@ -6,6 +6,17 @@ public class Shield extends Entity{
 	private static final int baseWidth = 50;
 	private static final int baseHeight = 20;
 	
+	private static final int vertX = 225;
+	private static final int upY = 205;
+	private static final int downY = 275;
+	
+	private static final int horizonY = 225;
+	private static final int leftX = 205;
+	private static final int rightX = 275;
+	
+	
+	
+	
 	private String state;
 	private Game game;
 	
@@ -19,29 +30,29 @@ public class Shield extends Entity{
 	public void tick() {
 		if (game.getKeyManager().up) {
 			state = "up";
-			super.setX(225);
-			super.setY(205);
+			super.setX(vertX);
+			super.setY(upY);
 			super.setHeight(baseHeight);
 			super.setWidth(baseWidth);
 		}
 		if (game.getKeyManager().left) {
 			state = "left";
-			super.setX(205);
-			super.setY(225);
+			super.setX(leftX);
+			super.setY(horizonY);
 			super.setHeight(baseWidth);
 			super.setWidth(baseHeight);
 		}
 		if (game.getKeyManager().down) {
 			state = "down";
-			super.setX(225);
-			super.setY(275);
+			super.setX(vertX);
+			super.setY(downY);
 			super.setHeight(baseHeight);
 			super.setWidth(baseWidth);
 		}
 		if (game.getKeyManager().right) {
 			state = "right";
-			super.setX(275);
-			super.setY(225);
+			super.setX(rightX);
+			super.setY(horizonY);
 			super.setHeight(baseWidth);
 			super.setWidth(baseHeight);
 		}
@@ -49,13 +60,18 @@ public class Shield extends Entity{
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(Color.RED);
+		g.setColor(Color.GREEN);
 		g.fillRect((int) x,(int) y, width, height);
 		
 	}
 	
 	public String getState() {
 		return state;
+	}
+
+	@Override
+	public void die() {
+		
 	}
 	
 }
