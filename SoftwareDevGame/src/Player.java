@@ -9,7 +9,7 @@ public class Player extends Creature {
 		
 		super(x, y, Creature.DEFAULT_CREATURE_WIDTH,Creature.DEFAULT_CREATURE_HEIGHT);
 		this.game = game;
-		super.setHealth(5);
+		super.setHealth(10);
 	}
 
 	@Override
