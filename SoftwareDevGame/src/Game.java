@@ -67,7 +67,6 @@ public class Game implements Runnable{
 		}
 		//Draw here!
 		
-		
 		//End Drawing
 		bs.show();
 		g.dispose(); 
