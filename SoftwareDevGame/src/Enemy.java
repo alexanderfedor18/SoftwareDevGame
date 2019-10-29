@@ -6,10 +6,10 @@ public class Enemy extends Creature{
 	private String startPoint;
 		
 	//Constructor
-	public Enemy(float x, float y, int width, int height, String direction) {
+	public Enemy(float x, float y, int width, int height, String direction, float speed) {
 		super(x, y, width, height);
 		super.setHealth(1);
-		super.setSpeed(2);
+		super.setSpeed(speed);
 		this.startPoint = direction;
 		if (direction == "up") {
 			super.setX(235);

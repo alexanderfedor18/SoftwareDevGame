@@ -3,7 +3,7 @@ import java.awt.Graphics;
 public class LevelOne extends Level {
 	
 	private final int ENEMY_SIZE = 30;
-	
+	private final float ENEMY_SPEED = 2.0f;
 	
 	
 	
@@ -32,15 +32,9 @@ public class LevelOne extends Level {
 		if (this.getEnemyTimer() < this.getEnemyCooldown()) {
 			return;
 		} else {
-			if (game.getKeyManager().eU) {
-				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, "up"));
-			} else if (game.getKeyManager().eD) {
-				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, "down"));
-			} else if (game.getKeyManager().eL) {
-				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, "left"));
-			} else if (game.getKeyManager().eR) {
-				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, "right"));
-			}
+			
+				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, "up", ENEMY_SPEED));
+			
 
 			this.setEnemyTimer(0);
 	
