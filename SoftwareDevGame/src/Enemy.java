@@ -11,16 +11,16 @@ public class Enemy extends Creature{
 		super.setHealth(1);
 		super.setSpeed(speed);
 		this.startPoint = direction;
-		if (direction == "up") {
+		if (direction.equals("up")) {
 			super.setX(235);
 			super.setY(0);
-		} else if(direction == "down") {
+		} else if(direction.equals("down")) {
 			super.setX(235);
 			super.setY(500);
-		} else if(direction == "left") {
+		} else if(direction.equals("left")) {
 			super.setX(0);
 			super.setY(235);
-		} else if (direction == "right") {
+		} else if (direction.equals("right")) {
 			super.setX(500);
 			super.setY(235);
 		}
@@ -29,13 +29,13 @@ public class Enemy extends Creature{
 
 	@Override
 	public void tick() {
-		if (startPoint == "up") {
+		if (startPoint.equals("up")) {
 			super.setY(super.getY()+super.getSpeed());			
-		} else if (startPoint == "down") {
+		} else if (startPoint.equals("down")) {
 			super.setY(super.getY() - super.getSpeed());
-		} else if (startPoint == "left") {
+		} else if (startPoint.equals("left")) {
 			super.setX(super.getX() + super.getSpeed());
-		} else if (startPoint == "right") {
+		} else if (startPoint.equals("right")) {
 			super.setX(super.getX() - super.getSpeed());
 		}
 		
@@ -51,20 +51,20 @@ public class Enemy extends Creature{
 	//checks to see if the enemy was shielded, and if it was returns true
 	public boolean checkShielded(Shield shield) {
 		
-		if (startPoint == "up") {
+		if (startPoint.equals("up")) {
 			if (shield.getState() == "up" && shield.getY() <= super.getY() + super.getHeight()) {
 				return true;
 			}
-		} else if (startPoint == "down") {
+		} else if (startPoint.equals("down")) {
 			if (shield.getState() == "down" && shield.getY()+shield.getHeight() >= super.getY()) {
 				return true;
 			}
-		} else if (startPoint == "left") {
+		} else if (startPoint.equals("left")) {
 			if (shield.getState() == "left" && shield.getX() <= super.getX() + super.getWidth()) {
 				return true;
 			}
 			
-		} else if (startPoint == "right") {
+		} else if (startPoint.equals("right")) {
 			if (shield.getState() == "right" && shield.getX() + shield.getWidth() >= super.getX()) {
 				return true;
 			}
