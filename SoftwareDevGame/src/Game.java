@@ -37,7 +37,7 @@ public class Game implements Runnable{
 		display.getFrame().addKeyListener(keyManager);
 		gameState = new GameState(this);
 		menuState = new MenuState(this);
-		State.setState(gameState);
+		State.setState(menuState);
 		
 		
 	}
