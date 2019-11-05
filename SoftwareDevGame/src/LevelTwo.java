@@ -8,19 +8,21 @@ public class LevelTwo extends Level {
 	private final float ENEMY_SPEED = 2.0f;
 	
 	File file;
-	Scanner scanner;
+	Scanner sc;
 	String direction;
+	private LevelThree LevelThree;
 	
 	public LevelTwo(Game game,EntityManager entityManager) {
 		super(game, entityManager);
 		this.setEnemyCooldown(800);
 		this.setEnemyTimer(this.getEnemyCooldown());
+		LevelThree = new LevelThree(game, super.entityManager);
 		file =  new File("H:\\git\\SoftwareDevGame\\LevelTwo.txt");
 		
 		
 		try {
 
-			scanner = new Scanner(file);
+			sc = new Scanner(file);
 		} catch (Exception e) {
 			
 		}
@@ -45,9 +47,12 @@ public class LevelTwo extends Level {
 		if (this.getEnemyTimer() < this.getEnemyCooldown()) {
 			return;
 		} else {
-			
-				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, "up", ENEMY_SPEED));
-			
+			if (sc.hasNext()) {
+				String direction = sc.next();
+				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, direction, ENEMY_SPEED));
+			}else {
+				Level.setLevel(LevelThree);
+			}
 
 			this.setEnemyTimer(0);
 	

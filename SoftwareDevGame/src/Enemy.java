@@ -76,21 +76,21 @@ public class Enemy extends Creature{
 	
 	//checks to see if the enemy hit the player, and if so returns true
 	public boolean checkSucceed(Player player) {
-		if (startPoint == "up") {
+		if (startPoint.equals("up")) {
 			if (super.getY() + super.getHeight() >= 235) {
 				return true;
 			}
 			
-		} else if (startPoint == "down") {
+		} else if (startPoint.equals("down")) {
 			if (super.getY() <= 265) {
 				return true;
 			}
-		} else if (startPoint == "left") {
+		} else if (startPoint.equals("left")) {
 			if (super.getX() + super.getWidth() >= 235) {
 				return true;
 			}
 			
-		} else if (startPoint == "right") {
+		} else if (startPoint.equals("right")) {
 			if (super.getX() <= 265) {
 				return true;
 			}

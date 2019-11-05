@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LevelThree extends Level {
 	
 	private final int ENEMY_SIZE = 30;
-	private final float ENEMY_SPEED = 2.0f;
+	private final float ENEMY_SPEED = 3.0f;
 	File file;
 	Scanner sc;
 	
@@ -14,7 +14,7 @@ public class LevelThree extends Level {
 		super(game, entityManager);
 		this.setEnemyCooldown(800);
 		this.setEnemyTimer(this.getEnemyCooldown());
-		file = new File("H:\\git\\SoftwareDevGame\\level1.txt");
+		file = new File("H:\\git\\SoftwareDevGame\\LevelThree.txt");
 		try {
 			sc =new Scanner(file);	
 		} catch (Exception e) {
@@ -45,7 +45,6 @@ public class LevelThree extends Level {
 		} else {
 			if (sc.hasNext()) {
 				String direction = sc.next();
-				System.out.print(direction);
 				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, direction, ENEMY_SPEED));
 			}
 				
