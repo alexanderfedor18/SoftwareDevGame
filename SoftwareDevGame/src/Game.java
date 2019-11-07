@@ -23,6 +23,7 @@ public class Game implements Runnable{
 	//States
 	private State gameState;
 	private State menuState;
+	public State gameOverState;
 	
 	public Game(String title, int width, int height) {
 		this.width = width;
@@ -37,6 +38,7 @@ public class Game implements Runnable{
 		display.getFrame().addKeyListener(keyManager);
 		gameState = new GameState(this);
 		menuState = new MenuState(this);
+		gameOverState = new GameOverState(this);
 		State.setState(menuState);
 		
 		

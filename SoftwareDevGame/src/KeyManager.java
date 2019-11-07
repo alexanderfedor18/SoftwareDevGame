@@ -6,6 +6,7 @@ public class KeyManager implements KeyListener{
 	private boolean[] keys;
 	public boolean up, down, left, right;
 	public boolean eU,eD,eL,eR;
+	public boolean enter, escape;
 	
 	public KeyManager() {
 		keys = new boolean[256];
@@ -21,6 +22,9 @@ public class KeyManager implements KeyListener{
 		eD = keys[KeyEvent.VK_S];
 		eL = keys[KeyEvent.VK_A];
 		eR = keys[KeyEvent.VK_D];
+		
+		enter = keys[KeyEvent.VK_ENTER];
+		escape = keys[KeyEvent.VK_ESCAPE];
 		
 	}
 	

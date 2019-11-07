@@ -67,6 +67,8 @@ public abstract class Level {
 	public void setEnemyTimer(long enemyTimer) {
 		this.enemyTimer = enemyTimer;
 	}
+	
+	public abstract int returnLevelNumber();
 
 
 }

@@ -2,34 +2,30 @@ import java.awt.Graphics;
 import java.io.File;
 import java.util.Scanner;
 
-public class LevelTwo extends Level {
+public class LevelFour extends Level {
 	
 	private final int ENEMY_SIZE = 30;
-	private final float ENEMY_SPEED = 2.0f;
-	
+	private final float ENEMY_SPEED = 4.0f;
 	File file;
 	Scanner sc;
-	String direction;
-	private LevelThree LevelThree;
 	
-	public LevelTwo(Game game,EntityManager entityManager) {
+	
+	public LevelFour(Game game,EntityManager entityManager) {
 		super(game, entityManager);
-		this.setEnemyCooldown(800);
+		this.setEnemyCooldown(300);
 		this.setEnemyTimer(this.getEnemyCooldown());
-		LevelThree = new LevelThree(game, super.entityManager);
-		//file =  new File("H:\\git\\SoftwareDevGame\\LevelTwo.txt");
-		file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\LevelTwo.txt");
-		
-		
+		//file = new File("H:\\git\\SoftwareDevGame\\LevelFour.txt");
+		file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\LevelFour.txt");
 		try {
-
-			sc = new Scanner(file);
+			sc =new Scanner(file);	
 		} catch (Exception e) {
 			
 		}
 	}
 	
-			
+	
+
+	
 	@Override
 	public void tick() {
 		
@@ -51,9 +47,8 @@ public class LevelTwo extends Level {
 			if (sc.hasNext()) {
 				String direction = sc.next();
 				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, direction, ENEMY_SPEED));
-			}else if (entityManager.getEntities().isEmpty()) {
-				Level.setLevel(LevelThree);
 			}
+				
 
 			this.setEnemyTimer(0);
 	
@@ -62,9 +57,11 @@ public class LevelTwo extends Level {
 			}
 
 
+
+
 	@Override
 	public int returnLevelNumber() {
-		return 2;
+		return 4;
 	}
 
 }

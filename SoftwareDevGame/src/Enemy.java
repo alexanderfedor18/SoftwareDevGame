@@ -46,6 +46,7 @@ public class Enemy extends Creature{
 	public void render(Graphics g) {
 		g.setColor(Color.RED);
 		g.fillRect((int) super.getX(), (int)super.getY(), width, height);
+		
 	}
 
 	//checks to see if the enemy was shielded, and if it was returns true

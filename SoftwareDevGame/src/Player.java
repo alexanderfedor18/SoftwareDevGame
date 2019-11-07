@@ -9,7 +9,7 @@ public class Player extends Creature {
 		
 		super(x, y, Creature.DEFAULT_CREATURE_WIDTH,Creature.DEFAULT_CREATURE_HEIGHT);
 		this.game = game;
-		super.setHealth(10);
+		super.setHealth(3);
 	}
 
 	@Override
@@ -22,10 +22,11 @@ public class Player extends Creature {
 		g.setColor(Color.CYAN);
 		g.fillOval((int) x, (int) y, width, height);
 		if (this.getHealth() > 0) {
-			g.drawString("Health: " + super.getHealth(), 0, 490);	
+			g.drawString("Health: " + super.getHealth(), 370, 30);	
 		}
 		else {
-			g.drawString("Game Over! You Lost all your Health!",0,490);
+			State.setState(game.gameOverState);
+		
 		}
 	}
 
