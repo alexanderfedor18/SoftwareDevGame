@@ -14,8 +14,8 @@ public class LevelFour extends Level {
 		super(game, entityManager);
 		this.setEnemyCooldown(300);
 		this.setEnemyTimer(this.getEnemyCooldown());
-		//file = new File("H:\\git\\SoftwareDevGame\\LevelFour.txt");
-		file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\LevelFour.txt");
+		file = new File("H:\\git\\SoftwareDevGame\\LevelFour.txt");
+		//file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\LevelFour.txt");
 		try {
 			sc =new Scanner(file);	
 		} catch (Exception e) {
@@ -47,6 +47,8 @@ public class LevelFour extends Level {
 			if (sc.hasNext()) {
 				String direction = sc.next();
 				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, direction, ENEMY_SPEED));
+			} else if(entityManager.getEntities().isEmpty()){
+				State.setState(game.winState);
 			}
 				
 

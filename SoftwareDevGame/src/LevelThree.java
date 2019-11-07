@@ -14,8 +14,8 @@ public class LevelThree extends Level {
 		super(game, entityManager);
 		this.setEnemyCooldown(500);
 		this.setEnemyTimer(this.getEnemyCooldown());
-		//file = new File("H:\\git\\SoftwareDevGame\\LevelThree.txt");
-		file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\LevelThree.txt");
+		file = new File("H:\\git\\SoftwareDevGame\\LevelThree.txt");
+		//file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\LevelThree.txt");
 		try {
 			sc =new Scanner(file);	
 		} catch (Exception e) {

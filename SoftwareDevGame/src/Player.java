@@ -26,6 +26,7 @@ public class Player extends Creature {
 		}
 		else {
 			State.setState(game.gameOverState);
+			super.setHealth(3);
 		
 		}
 	}

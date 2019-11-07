@@ -7,6 +7,7 @@ public class KeyManager implements KeyListener{
 	public boolean up, down, left, right;
 	public boolean eU,eD,eL,eR;
 	public boolean enter, escape;
+	public boolean spacebar;
 	
 	public KeyManager() {
 		keys = new boolean[256];
@@ -25,6 +26,8 @@ public class KeyManager implements KeyListener{
 		
 		enter = keys[KeyEvent.VK_ENTER];
 		escape = keys[KeyEvent.VK_ESCAPE];
+		spacebar = keys[KeyEvent.VK_SPACE];
+		
 		
 	}
 	

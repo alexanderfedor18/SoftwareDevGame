@@ -21,9 +21,10 @@ public class Game implements Runnable{
 	private KeyManager keyManager;
 	
 	//States
-	private State gameState;
-	private State menuState;
+	public State gameState;
+	public State menuState;
 	public State gameOverState;
+	public State winState;
 	
 	public Game(String title, int width, int height) {
 		this.width = width;
@@ -39,6 +40,7 @@ public class Game implements Runnable{
 		gameState = new GameState(this);
 		menuState = new MenuState(this);
 		gameOverState = new GameOverState(this);
+		winState = new WinState(this);
 		State.setState(menuState);
 		
 		
