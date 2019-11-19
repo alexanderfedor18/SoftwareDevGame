@@ -44,7 +44,7 @@ public class Enemy extends Creature{
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(Color.RED);
+		g.setColor(new Color(238,33,68));
 		g.fillRect((int) super.getX(), (int)super.getY(), width, height);
 		
 	}
