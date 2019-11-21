@@ -28,7 +28,7 @@ public class GameState extends State{
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(Color.DARK_GRAY);
+		g.setColor(new Color(80,80,80));
 		g.fillRect(0, 0, 500, 500);	
 		if (Level.getLevel() != null) {
 			Level.getLevel().render(g);
@@ -46,6 +46,8 @@ public class GameState extends State{
 			g.drawString("Level Three", 5, 30);
 		} else if (currentlevel == 4) {
 			g.drawString("Level Four" , 5, 30);
+		} else if (currentlevel == 5) {
+			g.drawString("Level Five", 5, 30);
 		}
 		
 		entityManager.render(g);

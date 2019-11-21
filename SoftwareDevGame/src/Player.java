@@ -19,7 +19,7 @@ public class Player extends Creature {
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(Color.CYAN);
+		g.setColor(new Color(97,219,255));
 		g.fillOval((int) x, (int) y, width, height);
 		if (this.getHealth() > 0) {
 			g.drawString("Health: " + super.getHealth(), 370, 30);	

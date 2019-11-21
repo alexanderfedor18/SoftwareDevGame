@@ -8,12 +8,13 @@ public class LevelFour extends Level {
 	private final float ENEMY_SPEED = 4.0f;
 	File file;
 	Scanner sc;
-	
+	LevelFive levelFive;
 	
 	public LevelFour(Game game,EntityManager entityManager) {
 		super(game, entityManager);
 		this.setEnemyCooldown(300);
 		this.setEnemyTimer(this.getEnemyCooldown());
+		levelFive = new LevelFive(game, entityManager);
 		file = new File("H:\\git\\SoftwareDevGame\\LevelFour.txt");
 		//file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\LevelFour.txt");
 		try {
@@ -47,8 +48,8 @@ public class LevelFour extends Level {
 			if (sc.hasNext()) {
 				String direction = sc.next();
 				entityManager.addEntity(new Enemy(0,0, ENEMY_SIZE, ENEMY_SIZE, direction, ENEMY_SPEED));
-			} else if(entityManager.getEntities().isEmpty()){
-				State.setState(game.winState);
+			} else if (entityManager.getEntities().isEmpty()) {
+				Level.setLevel(levelFive);
 			}
 				
 

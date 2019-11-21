@@ -5,13 +5,11 @@ import java.awt.image.BufferedImage;
 
 public class MenuState extends State{
 
-	private boolean startButton;
 	Font buttonFont;
 	private GameState gameState;
 	private BufferedImage testImage;
 	public MenuState(Game game) {
 		super(game);
-		startButton = true;
 		buttonFont = new Font("TimesRoman", Font.PLAIN, 30);
 		gameState = new GameState(game);
 		testImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\SaberArtGoStage2.png");
@@ -32,12 +30,12 @@ public class MenuState extends State{
 	@Override
 	public void render(Graphics g) {
 			
-		g.setColor(Color.DARK_GRAY);
+		g.setColor(new Color(100,100,100));
 		g.fillRect(0, 0, 500, 500);
-		g.setColor(new Color(0,100,225));
+		g.setColor(new Color(50,50,255));
 		g.fillRect(125, 125, 250, 150);
 		
-		g.setColor(new Color(255,25,25));
+		g.setColor(new Color(255,60,60));
 		g.fillRect(125, 300, 250, 150);
 		
 		g.setFont(new Font("Comic Sans", Font.PLAIN, 40));
@@ -46,10 +44,10 @@ public class MenuState extends State{
 		g.drawString("Game", 200, 100);
 		
 		g.setFont(buttonFont);
-		g.setColor(new Color(200,175,0));
+		g.setColor(new Color(255,75,75));
 		g.drawString("Press Enter to", 160, 195);
 		g.drawString("Start the Game!", 160, 225);
-		g.setColor(new Color(70,70,255));
+		g.setColor(new Color(50,50,255));
 		g.drawString("Press Escape to", 160, 365);
 		g.drawString("Exit the Game!", 160, 395);
 		g.drawImage(testImage,-50, -50, null);
