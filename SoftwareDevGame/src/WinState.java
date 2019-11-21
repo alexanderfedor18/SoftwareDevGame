@@ -28,8 +28,8 @@ public class WinState extends State{
 		g.drawString("Press Escape to Exit,", 20, 210);
 		//g.setFont(new Font("TimesNewRoman", Font.PLAIN, 40));
 		g.drawString("and try to win again!", 30, 260);
-		
+}
 		
 	}
 
-}
+

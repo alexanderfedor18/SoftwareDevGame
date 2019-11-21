@@ -1,17 +1,21 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 public class MenuState extends State{
 
 	private boolean startButton;
 	Font buttonFont;
 	private GameState gameState;
+	private BufferedImage testImage;
 	public MenuState(Game game) {
 		super(game);
 		startButton = true;
 		buttonFont = new Font("TimesRoman", Font.PLAIN, 30);
 		gameState = new GameState(game);
+		testImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\SaberArtGoStage2.png");
+
 	}
 	
 	
@@ -36,7 +40,7 @@ public class MenuState extends State{
 		g.setColor(new Color(255,25,25));
 		g.fillRect(125, 300, 250, 150);
 		
-		g.setFont(new Font("TimeNewRoman", Font.PLAIN, 40));
+		g.setFont(new Font("Comic Sans", Font.PLAIN, 40));
 		g.setColor(Color.white);
 		g.drawString("Software Development", 60, 50);
 		g.drawString("Game", 200, 100);
@@ -48,6 +52,7 @@ public class MenuState extends State{
 		g.setColor(new Color(70,70,255));
 		g.drawString("Press Escape to", 160, 365);
 		g.drawString("Exit the Game!", 160, 395);
+		g.drawImage(testImage,-50, -50, null);
 		
 		
 	}
