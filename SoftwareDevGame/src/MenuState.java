@@ -50,7 +50,7 @@ public class MenuState extends State{
 		g.setColor(new Color(50,50,255));
 		g.drawString("Press Escape to", 160, 365);
 		g.drawString("Exit the Game!", 160, 395);
-		g.drawImage(testImage,-50, -50, null);
+		g.drawImage(testImage,-250, -250, null);
 		
 		
 	}

@@ -28,7 +28,7 @@ public class GameState extends State{
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(new Color(80,80,80));
+		g.setColor(new Color(0,0,0));
 		g.fillRect(0, 0, 500, 500);	
 		if (Level.getLevel() != null) {
 			Level.getLevel().render(g);
