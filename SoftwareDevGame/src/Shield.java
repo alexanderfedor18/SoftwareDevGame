@@ -60,7 +60,7 @@ public class Shield extends Entity{
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(new Color(62,133,44));
+		g.setColor(new Color(77, 255, 131));
 		g.fillRect((int) x,(int) y, width, height);
 		
 	}

@@ -7,13 +7,13 @@ public class MenuState extends State{
 
 	Font buttonFont;
 	private GameState gameState;
-	private BufferedImage testImage;
+	private BufferedImage menuImage;
 	public MenuState(Game game) {
 		super(game);
 		buttonFont = new Font("TimesRoman", Font.PLAIN, 30);
 		gameState = new GameState(game);
-		testImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\SaberArtGoStage2.png");
-
+		//menuImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\SaberArtGoStage2.png");
+		menuImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\mainmenu'.jpg");
 	}
 	
 	
@@ -29,28 +29,28 @@ public class MenuState extends State{
 
 	@Override
 	public void render(Graphics g) {
-			
-		g.setColor(new Color(100,100,100));
-		g.fillRect(0, 0, 500, 500);
-		g.setColor(new Color(50,50,255));
-		g.fillRect(125, 125, 250, 150);
-		
-		g.setColor(new Color(255,60,60));
-		g.fillRect(125, 300, 250, 150);
-		
-		g.setFont(new Font("Comic Sans", Font.PLAIN, 40));
-		g.setColor(Color.white);
-		g.drawString("Software Development", 60, 50);
-		g.drawString("Game", 200, 100);
-		
-		g.setFont(buttonFont);
-		g.setColor(new Color(255,75,75));
-		g.drawString("Press Enter to", 160, 195);
-		g.drawString("Start the Game!", 160, 225);
-		g.setColor(new Color(50,50,255));
-		g.drawString("Press Escape to", 160, 365);
-		g.drawString("Exit the Game!", 160, 395);
-		g.drawImage(testImage,-250, -250, null);
+//			
+//		g.setColor(new Color(100,100,100));
+//		g.fillRect(0, 0, 500, 500);
+//		g.setColor(new Color(50,50,255));
+//		g.fillRect(125, 125, 250, 150);
+//		
+//		g.setColor(new Color(255,60,60));
+//		g.fillRect(125, 300, 250, 150);
+//		
+//		g.setFont(new Font("Comic Sans", Font.PLAIN, 40));
+//		g.setColor(Color.white);
+//		g.drawString("Software Development", 60, 50);
+//		g.drawString("Game", 200, 100);
+//		
+//		g.setFont(buttonFont);
+//		g.setColor(new Color(255,75,75));
+//		g.drawString("Press Enter to", 160, 195);
+//		g.drawString("Start the Game!", 160, 225);
+//		g.setColor(new Color(50,50,255));
+//		g.drawString("Press Escape to", 160, 365);
+//		g.drawString("Exit the Game!", 160, 395);
+		g.drawImage(menuImage,0, 0, null);
 		
 		
 	}
