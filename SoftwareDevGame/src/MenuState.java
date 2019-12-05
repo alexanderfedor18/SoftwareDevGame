@@ -12,7 +12,7 @@ public class MenuState extends State{
 		super(game);
 		buttonFont = new Font("TimesRoman", Font.PLAIN, 30);
 		gameState = new GameState(game);
-		menuImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\mainmenu.jpg");
+		menuImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\mainmenu'.jpg");
 		//menuImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\mainmenu'.jpg");
 	}
 	
