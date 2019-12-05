@@ -16,8 +16,8 @@ public class LevelOne extends Level {
 		this.setEnemyCooldown(1000);
 		this.setEnemyTimer(this.getEnemyCooldown());
 		LevelTwo = new LevelTwo(game, super.entityManager);
-		//file = new File("H:\\Git\\SoftwareDevGame\\level1.txt");
-		file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\level1.txt");
+		file = new File("H:\\Git\\SoftwareDevGame\\level1.txt");
+		//file = new File("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\level1.txt");
 		try {
 			sc =new Scanner(file);	
 		} catch (Exception e) {
