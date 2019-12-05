@@ -11,8 +11,8 @@ public class Player extends Creature {
 		super(x, y, Creature.DEFAULT_CREATURE_WIDTH,Creature.DEFAULT_CREATURE_HEIGHT);
 		this.game = game;
 		super.setHealth(3);
-		//earthImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\SaberArtGoStage2.png");
-		earthImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\earth.png");
+		earthImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\earth.png");
+		//earthImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\earth.png");
 	}
 
 	@Override

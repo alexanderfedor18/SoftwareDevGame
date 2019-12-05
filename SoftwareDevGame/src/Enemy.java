@@ -32,17 +32,17 @@ public class Enemy extends Creature{
 			super.setY(235);
 		}
 
-		//upImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\up.png");
-		upImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\up.png");
+		upImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\up.png");
+		//upImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\up.png");
 
-		//downImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\down.png");
-		downImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\down.png");
+		downImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\down.png");
+		//downImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\down.png");
 		
-		//leftImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\left.png");
-		leftImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\left.png");
+		leftImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\left.png");
+		//leftImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\left.png");
 		
-		//rightImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\right.png");
-		rightImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\right.png");		
+		rightImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\right.png");
+		//rightImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\right.png");		
 	}
 
 	@Override

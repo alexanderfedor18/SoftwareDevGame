@@ -10,8 +10,8 @@ public class WinState extends State{
 	
 	public WinState(Game game) {
 		super(game);
-		//winImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\win.png");
-		winImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\win.png");
+		winImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\win.png");
+		//winImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\win.png");
 	}
 
 	@Override

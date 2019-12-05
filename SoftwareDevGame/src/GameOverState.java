@@ -9,8 +9,8 @@ public class GameOverState extends State{
 
 	public GameOverState(Game game) {
 		super(game);
-		//lostImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\lost.png");
-		lostImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\lost.png");
+		lostImage = ImageLoader.loadImage("H:\\git\\SoftwareDevGame\\lost.png");
+		//lostImage = ImageLoader.loadImage("C:\\Users\\ultim\\Documents\\Git\\SoftwareDevGame\\lost.png");
 	}
 
 	@Override
